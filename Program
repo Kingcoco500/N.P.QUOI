@@ -1,6 +1,6 @@
 // Pour commencer, nous allons définir les broches correctes dont nous avons besoin.
 // déclarer nos variables
-int valveN = 3; //donc, nous donnons le nom valveN à la broche 13.
+int valveN = 3; //donc, nous donnons le nom valveN à la broche 3.
 int valveP = 5; 
 int valveK = 6; 
 
