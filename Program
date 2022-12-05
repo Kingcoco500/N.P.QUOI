@@ -1,0 +1,82 @@
+// Pour commencer, nous allons définir les broches correctes dont nous avons besoin.
+// déclarer nos variables
+int valveN = 3; //donc, nous donnons le nom valveN à la broche 13.
+int valveP = 5; 
+int valveK = 6; 
+
+//C'est ce qu'on change en fonction de la plante qu'on veut
+String plant = "Basil";
+
+//CHAQUE FOIS QUE NOUS VOULONS AJOUTER UNE PLANTE, NOUS DEVONS :
+// 1) Créer une fonction ratio
+// 2) Nous créons une expression "If" pour notre nouvelle plante
+// 3) Appelez la nouvelle fonction ratio
+// 4) définir un délai dans l'instruction "if"
+
+
+void BasilRatio() {
+// digitalWrite(valveN, LOW);
+// digitalWrite(valveP, LOW);
+// digitalWrite(valveK, LOW);
+//si la plante est du basilic, ouvrir n pendant 10 secondes, p pendant 10 secondes et k pendant 10 secondes
+// delay(2000);
+digitalWrite(valveN, HIGH);
+delay(10000);
+//digitalWrite(valveN, LOW);
+
+//delay(2000);
+digitalWrite(valveP, HIGH);
+delay(10000);
+//digitalWrite(valveP, LOW);
+
+//delay(2000);
+digitalWrite(valveK, HIGH);
+delay(10000);
+//digitalWrite(valveK, LOW);
+
+digitalWrite(valveN, LOW);
+digitalWrite(valveP, LOW);
+digitalWrite(valveK, LOW);
+//donc, nous ouvrons et fermons chaque electrovanne en même temps
+ }
+
+void TomatoRatio() {
+//si la plante est une tomate, ouvrir n pendant 10 secondes, p pendant 8 secondes et k pendant 10 secondes
+digitalWrite(valveN, HIGH);
+delay(10000);
+
+digitalWrite(valveP, HIGH);
+delay(8000);
+
+digitalWrite(valveK, HIGH);
+delay(10000);
+
+digitalWrite(valveN, LOW);
+digitalWrite(valveP, LOW);
+digitalWrite(valveK, LOW);
+}
+
+//Now, to setup the program, we need to set these as our outputs. 
+void setup() {
+  //set the valve pins as outputs
+  pinMode(valveN,OUTPUT);
+  pinMode(valveP,OUTPUT);
+  pinMode(valveK,OUTPUT);
+}
+
+//Maintenant, c'est le code qui continuera à être exécuté encore et encore...
+void loop() {
+
+if (plant="Basil") {
+  //Set the ratios
+BasilRatio();
+//Now pause for 5 weeks and then repeat.
+delay(3024000);
+}
+
+if (plant="Tomato"){
+  TomatoRatio();
+  delay(3024000);
+}
+
+}
